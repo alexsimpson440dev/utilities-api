@@ -1,5 +1,6 @@
 package com.utilities.controllers;
 
+import com.utilities.domains.User;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 
@@ -7,7 +8,7 @@ import io.micronaut.http.annotation.Get;
 public class HelloWorldController {
 
     @Get
-    public String getHelloWorld() {
-        return "Hello World!";
+    public User getHelloWorld() {
+        return new User("alex", "simpson", "123456789", "me@email.com");
     }
 }
