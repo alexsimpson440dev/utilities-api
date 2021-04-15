@@ -1,5 +1,6 @@
 package com.utilities.controllers;
 
+import com.utilities.domains.Tenant;
 import com.utilities.domains.User;
 import com.utilities.services.UserService;
 import io.micronaut.http.annotation.Controller;
@@ -19,8 +20,13 @@ public class HelloWorldController {
         this.userService = userService;
     }
 
-    @Get
+    @Get("/user")
     public List<User> getHelloWorld() {
         return userService.findAll();
+    }
+
+    @Get("/tenant")
+    public List<Tenant> getTenant() {
+        return userService.findAllTenants();
     }
 }
