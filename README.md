@@ -10,3 +10,6 @@
 
 - [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
 
+# Setup
+1. Install Java 11
+2. Setup java 11 on your machine (put on top of system path)
