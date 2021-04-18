@@ -16,11 +16,11 @@ public class Tenant {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "tenant_id")
     private Long tenantId;
 
-    @Column(name = "user_id")
     private Long userId;
+
+    private Long propertyId;
 
     public Long getTenantId() {
         return tenantId;
@@ -45,7 +45,4 @@ public class Tenant {
     public void setPropertyId(Long propertyId) {
         this.propertyId = propertyId;
     }
-
-    @Column(name = "property_id")
-    private Long propertyId;
 }

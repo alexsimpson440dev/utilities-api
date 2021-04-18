@@ -1,6 +1,13 @@
 micronaut:
   application:
     name: utilitiesApi
+  server:
+    cors:
+      enabled: true
+
+jackson:
+  propertyNamingStrategy: SNAKE_CASE
+  dateFormat: "yyyy-dd-MM"
 
 datasources:
   default:

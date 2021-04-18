@@ -1,6 +1,5 @@
 package com.utilities.services;
 
-import com.utilities.domains.Tenant;
 import com.utilities.domains.User;
 import io.micronaut.transaction.annotation.ReadOnly;
 
@@ -19,11 +18,11 @@ public class UserService {
 
     @ReadOnly
     public List<User> findAll() {
-        return entityManager.createQuery("from User", User.class).getResultList();
+        return entityManager.createQuery("select u from User u", User.class).getResultList();
     }
 
     @ReadOnly
-    public List<Tenant> findAllTenants() {
-        return entityManager.createQuery("from Tenant", Tenant.class).getResultList();
+    public User findById(Long userId) {
+        return entityManager.find(User.class, userId);
     }
 }
