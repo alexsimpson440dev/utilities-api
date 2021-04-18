@@ -6,7 +6,6 @@ micronaut:
       enabled: true
 
 jackson:
-  propertyNamingStrategy: SNAKE_CASE
   dateFormat: "yyyy-dd-MM"
 
 datasources:
