@@ -25,9 +25,12 @@
   - Open powershell or command prompt
   - Type `java --version`
     - you should see java 11 show up
-### `4. Setup Gradle Project`
+### `4. update application.yml`
+  - Under the project, open up the `src/main/resources/application.yml` file
+  - Change the `username` and `password` variables to the variables you have in your MySql Workbench
+### `5. Setup Gradle Project`
   - Go to the project directory in your command shell or powershell window
   - Run `./gradlew build --refresh-dependencies`
   - Once finished, run `./gradlew clean build`
-### `5. Run the API`
+### `6. Run the API`
   - Run `./gradlew run` in the project directory
