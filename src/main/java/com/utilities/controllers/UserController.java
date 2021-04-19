@@ -2,6 +2,7 @@ package com.utilities.controllers;
 
 import com.utilities.domains.Tenant;
 import com.utilities.domains.User;
+import com.utilities.domains.View;
 import com.utilities.services.UserService;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
@@ -29,5 +30,10 @@ public class UserController {
     @Get("/{userId}")
     public User getUserById(@PathVariable Long userId) {
         return userService.findById(userId);
+    }
+
+    @Get("/view")
+    public List<View> getView() {
+        return userService.getView();
     }
 }
