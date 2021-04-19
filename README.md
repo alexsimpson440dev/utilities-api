@@ -25,7 +25,7 @@
   - Open powershell or command prompt
   - Type `java --version`
     - you should see java 11 show up
-### `4. update application.yml`
+### `4. Update application.yml`
   - Under the project, open up the `src/main/resources/application.yml` file
   - Change the `username` and `password` variables to the variables you have in your MySql Workbench
 ### `5. Setup Gradle Project`
